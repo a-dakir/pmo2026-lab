@@ -10,5 +10,5 @@ A collection of my personal solutions to the PMO Lab lecture exercises from the 
 
 ---
 
-A list of excercises has been presented, I worked on 05-Array:
-The files i worked on are WorkWithArrays, Smartphone, PlayWithSmartphoneArrays
+A list of excercises has been presented, I will be completing every exercise and posting my personal solutions in this repo.
+
