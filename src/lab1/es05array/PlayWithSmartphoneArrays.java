@@ -1,4 +1,4 @@
-package array221026;
+package lab1.es05array;
 
 public class PlayWithSmartphoneArrays {
 

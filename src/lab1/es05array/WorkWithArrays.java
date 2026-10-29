@@ -1,3 +1,6 @@
+package lab1.es05array;
+
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class WorkWithArrays {
@@ -13,22 +16,68 @@ public class WorkWithArrays {
 
 
     public static int countOccurrencies(final int[] array, final int elem) {
-        return 0;
+        int c=0;
+        for(int el: array) {
+        	if(el==elem) 
+        		c++;
+        }
+        return c;
     }
 
     public static int[] evenElements(final int[] array) {
-        return new int[] {};
+        
+        int[] evens = new int[array.length%2==0 ? array.length/2 : array.length/2+1];
+        
+        for(int i=0,j=0; i < array.length; i++) {
+        	if(i%2==0) {
+        		evens[j]=array[i];
+        		j++;
+        	}
+        }
+        return evens;
     }
 
     public static int[] oddElements(final int[] array) {
-        return new int[] {};
+    	int[] odds = new int[array.length/2];
+    	
+    	for(int i=0,j=0; i < array.length; i++) {
+        	if(i%2!=0) {
+        		odds[j]=array[i];
+        		j++;
+        	}
+        }
+        return odds;
     }
 
     public static int mostRecurringElement(final int[] array) {
-        return 0;
+    	int num=array[0];
+        for(int i=0,rec=0,c=0; i<array.length;i++) {
+        	for(int j=0;j<array.length;j++) {
+        		if(array[j]==array[i]) {
+        			c++;
+        		}
+        	}
+        	if(c>rec) {
+        		rec=c;
+        		c=0;
+        		num=array[i];
+        	}
+        }
+        return num;
     }
 
     public static int[] revertUpTo(int[] a, int n){
+        for(int i=0;i<a.length;i++) {
+        	if(a[i]==n) {
+        		
+        		for(int j=0,temp=0,tail=i;j<tail/2;j++,i--) {
+        			temp=a[i];
+        			a[i]=a[j];
+        			a[j]=temp;
+        		}
+        		break;
+        	}
+        }
         return a;
     }
 
@@ -53,7 +102,8 @@ public class WorkWithArrays {
         return countOccurrencies(new int[] { 1, 2, 3, 4 }, 1) == 1
                 && countOccurrencies(new int[] { 0, 2, 3, 4 }, 1) == 0
                 && countOccurrencies(new int[] { 7, 4, 1, 9, 3, 1, 5 }, 2) == 0
-                && countOccurrencies(new int[] { 1, 2, 1, 3, 4, 1 }, 1) == 3;
+                && countOccurrencies(new int[] { 1, 2, 1, 3, 4, 1 }, 1) == 3
+                && countOccurrencies(new int[] { 4, 9, 1, 1, 3, 5, 1, 16, 5, 81, 1, 0, 3, 1}, 1) == 5;
     }
 
     public static boolean testEvenElements() {

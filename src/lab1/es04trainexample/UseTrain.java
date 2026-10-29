@@ -1,3 +1,5 @@
+package lab1.es04trainexample;
+
 class UseTrain {
     public static void main(String[] args) {
         /*
@@ -24,5 +26,20 @@ class UseTrain {
          * 5) Prenotare nuovamente dei posti e stampare le nuove percentuali di
          * occupazione
          */
+    	Train t = new Train(40,160,2,70);
+    	t.reserveFirstClassSeats(8);
+    	System.out.println("Total Occupancy Ratio: " + t.getTotOccupancyRatio());
+    	System.out.println("First Class Occupancy Ratio: " + t.getFirstClassOccupancyRatio());
+    	t.reserveSecondClassSeats(44);
+    	System.out.println("Total Occupancy Ratio: " + t.getTotOccupancyRatio());
+    	System.out.println("Second Class Occupancy Ratio: " + t.getSecondClassOccupancyRatio());
+    	t.deleteAllReservations();
+    	t.reserveFirstClassSeats(38);
+    	System.out.println("Total Occupancy Ratio: " + t.getTotOccupancyRatio());
+    	System.out.println("First Class Occupancy Ratio: " + t.getFirstClassOccupancyRatio());
+    	t.reserveSecondClassSeats(91);
+    	System.out.println("Total Occupancy Ratio: " + t.getTotOccupancyRatio());
+    	System.out.println("Second Class Occupancy Ratio: " + t.getSecondClassOccupancyRatio());
+    	
     }
 }

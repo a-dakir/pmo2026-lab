@@ -1,3 +1,4 @@
+package lab1.es01helloworld;
 /*
  * Esempio di prima applicazione
  */
@@ -10,5 +11,7 @@ class HelloWorld {
          * Stampa "Hello World!" in standard output
          */
         System.out.println("Hello, world!");
+        
+        System.out.println("Hello, universe! " + (50 + 50 * 50));
     }
 }

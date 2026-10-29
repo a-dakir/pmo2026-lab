@@ -1,3 +1,4 @@
+package lab1.es02studentexample;
 class TestStudent {
   public static void main(String[] args) {
       Student student = new Student();
@@ -5,7 +6,11 @@ class TestStudent {
        * aggiornare l'invocazione del metodo build con l'aggiunta dei
        * parametri
        */
-      student.build();
+      student.build("Luigi","Gentile",1015,2019);
+      student.printStudentInfo();
+      student.build("Simone","Bianchi",1016,2018);
+      student.printStudentInfo();
+      student.build("Andrea","Bracci",1017,2017);
       student.printStudentInfo();
       /*
        * Creare dei nuovi oggetti relativi agli studenti:
