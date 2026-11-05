@@ -1,4 +1,4 @@
-package bank;
+package lab3.src.bank;
 
 public class AccountHolder {
 

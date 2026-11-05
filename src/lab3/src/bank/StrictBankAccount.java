@@ -1,4 +1,4 @@
-package bank;
+package lab3.src.bank;
 
 public class StrictBankAccount implements BankAccount {
 
@@ -67,4 +67,5 @@ public class StrictBankAccount implements BankAccount {
     public void withdrawFromATM(final int usrID, final double amount) {
         this.withdraw(usrID, amount + StrictBankAccount.ATM_TRANSACTION_FEE);
     }
+    
 }

@@ -1,4 +1,4 @@
-package bank;
+package lab3.src.bank;
 
 //CHECKSTYLE:OFF
 public final class TestBankAccount {
