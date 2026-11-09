@@ -2,10 +2,8 @@ package lab3.src.bank;
 
 public abstract class AbstractBankAccount implements BankAccount {
 
-	 	public static final double ATM_TRANSACTION_FEE = 1;
-	 	private static final double MANAGEMENT_FEE = 5;
-	    private static final double TRANSACTION_FEE = 0.1;
-	    
+	 	private static final double ATM_TRANSACTION_FEE = 1;
+
 	    private double balance;
 	    private int nTransactions;
 	    private final int usrID;
@@ -58,7 +56,7 @@ public abstract class AbstractBankAccount implements BankAccount {
 	    public abstract void withdraw(final int usrID, final double amount);
 
 	    public void withdrawFromATM(final int usrID, final double amount) {
-	        this.withdraw(usrID, amount + SimpleBankAccount.ATM_TRANSACTION_FEE);
+	        this.withdraw(usrID, amount + ATM_TRANSACTION_FEE);
 	    }
 	    
 	    protected abstract boolean isWithDrawAllowed(double amount);
